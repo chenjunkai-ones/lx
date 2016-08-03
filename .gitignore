@@ -1,0 +1,14 @@
+#Ignore docs files
+
+#Numerous always-ignore extensions
+*.zip
+
+._*
+.DS_Store
+.idea
+.proejct
+.settings
+Thumbs.db
+
+bower_components
+node_modules

@@ -1,0 +1,22 @@
+{
+  "name": "ifangchou",
+  "description": "ifangchou project",
+  "main": "index.js",
+  "authors": [
+    "cjk"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "amd",
+    "es6",
+    "node"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

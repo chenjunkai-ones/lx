@@ -1,0 +1,14 @@
+{
+  "name": "ifangchou",
+  "version": "1.0.0",
+  "description": "ifangchou project",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "author": "cjk",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
