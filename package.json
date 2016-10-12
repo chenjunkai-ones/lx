@@ -1,14 +1,23 @@
 {
-  "name": "ifangchou",
-  "version": "1.0.0",
-  "description": "ifangchou project",
+  "name": "lx",
+  "version": "0.0.1",
+  "description": "this is a simple web frontend framework",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whatthecole/lx.git"
+  },
   "author": "cjk",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
-  }
+    "babel-preset-es2015": "^6.13.1",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "dependencies": {}
 }

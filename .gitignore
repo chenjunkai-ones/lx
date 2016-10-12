@@ -9,6 +9,7 @@
 .proejct
 .settings
 Thumbs.db
+.gulp-scss-cache
 
 bower_components
 node_modules
