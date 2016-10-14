@@ -1,0 +1,44 @@
+@include b('btn') {
+  display: inline-block;
+  font-weight: normal;
+  line-height: $btn-line-height;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: $border-width solid rgba(255, 255, 255, 0);
+  @include btn-size($btn-padding-x, $btn-padding-y, $btn-font-size, $btn-border-radius);
+  @include box-shadow($btn-box-shadow);
+  @include transition(border .2s ease-in-out, color .2s ease-in-out, background .2s ease-in-out);
+  &:focus {
+    outline: none;
+  }
+
+
+
+  @include m('sm') { @include btn-size($btn-padding-x-sm, $btn-padding-y-sm, $btn-font-size-sm, $btn-border-radius-sm) }
+  @include m('lg') { @include btn-size($btn-padding-x-lg, $btn-padding-y-lg, $btn-font-size-lg, $btn-border-radius-lg) }
+
+  @include m('blue') { @include btn-variant(#fff, $link-blue, $link-blue) }
+  @include m('red') { @include btn-variant(#fff, $red, $red) }
+  @include m('yellow') { @include btn-variant(#fff, $yellow, $yellow) }
+  @include m('green') { @include btn-variant(#fff,$green, $green) }
+  @include m('white') { @include btn-variant($gray-dark, #fff, #fff, false) }
+  @include m('dark-gray') { @include btn-variant(#fff, $gray-dark, $gray-dark, false) }
+  @include m('light-gray') { @include btn-variant($gray-dark, $gray-lightest, $gray-lightest, false) }
+
+  @include m('outline') {
+    @include m('blue') { @include btn-outline-variant($link-blue, #fff, $link-blue)}
+    @include m('red') { @include btn-outline-variant($red, #fff, $red)}
+    @include m('yellow') { @include btn-outline-variant($yellow, #fff, $yellow)}
+    @include m('green') { @include btn-outline-variant($green, #fff, $green)}
+    @include m('dark-gray') { @include btn-outline-variant($gray-dark, #fff, $gray-dark, false)}
+    @include m('light-gray') { @include btn-outline-variant($gray-lighter, #fff, $gray-lightest, false)}
+  }
+
+  @include m('block') {
+    display: block;
+    width: 100%;
+  }
+}

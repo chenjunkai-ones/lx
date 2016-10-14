@@ -1,0 +1,49 @@
+@mixin btn-variant($color, $background, $border, $disabled-style: true) {
+  color: $color;
+  background: $background;
+  border: 1px solid $border;
+  &:hover {
+    background: lighten($background, 4%);
+  }
+
+  @if $disabled-style {
+    $selector: selectorToString(&);
+    $block: getBlock($selector);
+    &.#{$block + $modifier-separator + 'disabled'},
+    &.#{$block + $modifier-separator + 'disabled'}:hover,
+    &:disabled,
+    &:disabled:hover {
+      background: lighten($background, 15%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin btn-outline-variant($color, $background, $border, $disabled-style: true) {
+  color: $color;
+  background: $background;
+  border: 1px solid $border;
+  &:hover {
+    color: lighten($border, 4%);
+    border-color: lighten($border, 4%);
+  }
+
+  @if $disabled-style {
+    $selector: selectorToString(&);
+    $block: getBlock($selector);
+    &.#{$block + $modifier-separator + 'disabled'},
+    &.#{$block + $modifier-separator + 'disabled'}:hover,
+    &:disabled,
+    &:disabled:hover {
+      color: lighten($color, 15%);
+      border-color: lighten($color, 15%);
+      cursor: not-allowed;
+    }
+  }
+}
+
+@mixin btn-size($padding-x, $padding-y, $font-size, $radius) {
+  padding: $padding-y $padding-x;
+  font-size: $font-size;
+  border-radius: $radius;
+}

@@ -12,6 +12,7 @@ gulp.task('sass', () => {
         .pipe(sass({outputStyle: 'compressed'}))
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest("dist/css"))
+        .pipe(gulp.dest("docs/css"))
 });
 
 gulp.task('js', () => {
@@ -20,6 +21,7 @@ gulp.task('js', () => {
             presets: ['es2015']
         }))
         .pipe(gulp.dest('dist/js'))
+        .pipe(gulp.dest('docs/js'))
 });
 
 gulp.task('default', ['sass', 'js']);

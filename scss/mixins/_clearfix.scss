@@ -1,0 +1,14 @@
+@mixin clearfix() {
+  &:before {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    content: ' ';
+    clear: both;
+  }
+}
+
+%clearfix {
+  @include clearfix;
+}

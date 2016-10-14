@@ -1,10 +1,473 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
-Hello World!
-</body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+  <h1 class="page-heading">Typography</h1>
+
+  <h1>Heading <small>this is samll text</small></h1>
+  <h2>Heading <small>this is samll text</small></h2>
+  <h3>Heading <small>this is samll text</small></h3>
+  <h4>Heading <small>this is samll text</small></h4>
+  <h5>Heading <small>this is samll text</small></h5>
+  <h6>Heading <small>this is samll text</small></h6>
+
+  <h1 class="page-heading">Buttons</h1>
+
+  <div>
+    <button class="btn btn--blue">button</button>
+    <button class="btn btn--red">button</button>
+    <button class="btn btn--yellow">button</button>
+    <button class="btn btn--green">button</button>
+    <button class="btn btn--white">button</button>
+    <button class="btn btn--dark-gray">button</button>
+    <button class="btn btn--light-gray">button</button>
+  </div>
+
+  <div>
+    <button class="btn btn--blue btn--sm">button</button>
+    <button class="btn btn--blue">button</button>
+    <button class="btn btn--blue btn--lg">button</button>
+  </div>
+
+  <div>
+    <button class="btn btn--outline--blue">button</button>
+    <button class="btn btn--outline--red">button</button>
+    <button class="btn btn--outline--yellow">button</button>
+    <button class="btn btn--outline--green">button</button>
+    <button class="btn btn--outline--dark-gray">button</button>
+    <button class="btn btn--outline--light-gray">button</button>
+  </div>
+
+  <div>
+    <button class="btn btn--blue btn--disabled">disabled</button>
+    <button class="btn btn--red btn--disabled">disabled</button>
+    <button class="btn btn--yellow btn--disabled">disabled</button>
+    <button class="btn btn--green btn--disabled">disabled</button>
+  </div>
+
+  <div>
+    <button class="btn btn--outline--blue btn--disabled">disabled</button>
+    <button class="btn btn--outline--red btn--disabled">disabled</button>
+    <button class="btn btn--outline--yellow btn--disabled">disabled</button>
+    <button class="btn btn--outline--green btn--disabled">disabled</button>
+  </div>
+
+  <div class="page-heading">Grid</div>
+  <div>
+    <div class="grid-wrapper--0">
+      <div class="col--1">
+        <div class="card">1</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--0">
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--0">
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--0">
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--0">
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper--10">
+      <div class="col--1">
+        <div class="card">1</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--10">
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--10">
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--10">
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--10">
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper--15">
+      <div class="col--1">
+        <div class="card">1</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--15">
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--15">
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--15">
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--15">
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper--20">
+      <div class="col--1">
+        <div class="card">1</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--20">
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--20">
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--20">
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--20">
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+    </div>
+
+    <div class="grid-wrapper--30">
+      <div class="col--1">
+        <div class="card">1</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--30">
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+      <div class="col--2">
+        <div class="card">2</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--30">
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+      <div class="col--3">
+        <div class="card">3</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--30">
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+      <div class="col--4">
+        <div class="card">4</div>
+      </div>
+    </div>
+    <div class="grid-wrapper--30">
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+      <div class="col--5">
+        <div class="card">5</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-heading">Form</div>
+  <form class="form">
+    <fieldset class="form__group">
+      <label class="form__label" for="username">账户</label>
+      <input id="username" type="text" class="form__control" placeholder="请输入用户名"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label" for="password">密码</label>
+      <input id="password" type="password" class="form__control" placeholder="请输入密码"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label" for="email">邮箱</label>
+      <input id="email" type="email" class="form__control" placeholder="请输入邮箱"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label" for="birthday">生日</label>
+      <input id="birthday" type="date" class="form__control" placeholder="请输入邮箱"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label" for="select">选择</label>
+      <select name="" id="select" class="form__control">
+        <option value="">1</option>
+        <option value="">2</option>
+      </select>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label>男 <input type="radio"/></label>
+      <label>女 <input type="radio"/></label>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label>checkbox1 <input type="checkbox"/></label>
+      <label>checkbox2 <input type="checkbox"/></label>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <button class="btn btn--blue">提交</button>
+    </fieldset>
+  </form>
+
+  <form action="">
+    <fieldset class="form__group">
+      <label class="form__label form__label--sm">sm input</label>
+      <input type="text" class="form__control form__control--sm" placeholder="sm input"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label"> input</label>
+      <input type="text" class="form__control" placeholder="sm input"/>
+    </fieldset>
+
+    <fieldset class="form__group">
+      <label class="form__label form__label--lg">lg input</label>
+      <input type="text" class="form__control form__control--lg" placeholder="sm input"/>
+    </fieldset>
+  </form>
+
+  <form class="form">
+    <fieldset class="form__group">
+      <label class="form__label col-xs-3" for="username2">账户</label>
+      <div class="col-xs-9">
+        <input id="username2" class="form__control " type="text" />
+      </div>
+    </fieldset>
+    <fieldset class="form__group">
+      <button class="btn btn--blue">提交</button>
+    </fieldset>
+  </form>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>3</th>
+        <th>2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <table class="table table--hover">
+    <thead>
+    <tr>
+      <th>1</th>
+      <th>3</th>
+      <th>2</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,4 +1,32 @@
+@import "variables";
+@import "mixins";
+
+//样式重置
 @import "normalize";
-body {
-  color: #ffffff;
-}
+
+//核心样式
+@import "reboot";
+@import "type";
+@import "grid";
+@import "buttons";
+@import "forms";
+@import "tables";
+
+//Components
+@import "animation";
+@import "close";
+@import "nav";
+@import "navbar";
+@import "tags";
+@import "alert";
+@import "cards";
+@import "breadcrumb";
+@import "pagination";
+@import "callout";
+@import "progress";
+@import "list-group";
+@import "tooltips";
+
+
+// Utility classes
+@import "utilities";

@@ -13,3 +13,7 @@ Thumbs.db
 
 bower_components
 node_modules
+
+_gh_pages
+.sass-cache
+.jekyll-metadata

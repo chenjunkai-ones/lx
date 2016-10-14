@@ -1,0 +1,55 @@
+$element-separator: '__';
+$modifier-separator: '--';
+
+@function selectorToString($selector) {
+  $selector: inspect($selector);
+  $selector: str-slice($selector, 2, -2);
+  @return $selector;
+}
+
+@function containsModifier($selector) {
+  $selector: selectorToString($selector);
+  @if str_index($selector, $modifier-separator) {
+    @return true;
+  } @else {
+    @return false;
+  }
+}
+
+@function getBlock($selector) {
+  $selector: selectorToString($selector);
+  $modifierStart: str-index($selector, $modifier-separator);
+  @return str-slice($selector, 0, $modifierStart - 1);
+}
+
+@mixin b($block) {
+  .#{$block} {
+    @content;
+  }
+}
+
+@mixin e($element) {
+  $selector: &;
+  @if containsModifier($selector) {
+    $block: getBlock($selector);
+    @at-root {
+      #{$selector} {
+        #{$block + $element-separator + $element} {
+          @content;
+        }
+      }
+    }
+  } @else {
+    @at-root {
+      #{$selector + $element-separator + $element} {
+        @content;
+      }
+    }
+  }
+}
+
+@mixin m($modifier) {
+  @at-root #{&}#{$modifier-separator + $modifier} {
+    @content;
+  }
+}

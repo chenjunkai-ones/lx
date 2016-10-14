@@ -1,0 +1,63 @@
+@include b('form') {
+  @include e('group') {
+    position: relative;
+    margin-bottom: $spacer / 2;
+  }
+
+  @include e('control') {
+    display: block;
+    width: 100%;
+    padding: $input-padding-y $input-padding-x;
+    border: 1px solid $input-border-color;
+    line-height: $input-line-height;
+    background-color: $input-bg;
+    background-image: none;
+    background-clip: padding-box;
+    color: $input-color;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    @include box-shadow($input-box-shadow);
+    @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+
+    @if $enable-rounded {
+      border-radius: $input-border-radius;
+    } @else {
+      border-radius: 0;
+    }
+    @include form-control-focus();
+
+    &::-ms-expand {
+      background-color: transparent;
+      border: 0;
+    }
+
+    &::placeholder {
+      color: $input-color-placeholder;
+      opacity: 1;
+    }
+
+    @include m('sm') {
+      padding: $input-padding-y-sm $input-padding-x-sm;
+      font-size: $font-size-sm;
+    }
+
+    @include m('lg') {
+      padding: $input-padding-y-lg $input-padding-x-lg;
+      font-size: $font-size-lg;
+    }
+  }
+
+  @include e('label') {
+    padding: $input-padding-y $input-padding-x;
+    @include m('sm') {
+      padding: $input-padding-y-sm $input-padding-x-sm;
+      font-size: $font-size-sm;
+    }
+
+    @include m('lg') {
+      padding: $input-padding-y-lg $input-padding-x-lg;
+      font-size: $font-size-lg;
+    }
+  }
+
+}
