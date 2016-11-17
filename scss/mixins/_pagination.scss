@@ -1,0 +1,7 @@
+@mixin pagination-size($padding-y, $padding-x, $font-size, $line-height) {
+  @include e('link') {
+    padding: $padding-y $padding-x;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}

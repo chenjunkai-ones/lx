@@ -1,0 +1,91 @@
+%pagination-active {
+  z-index: 2;
+  color: $pagination-active-color;
+  cursor: default;
+  background-color: $pagination-active-bg;
+  border-color: $pagination-active-border;
+}
+
+%pagination-disabled {
+  color: $pagination-disabled-color;
+  pointer-events: none;
+  cursor: not-allowed;
+  background-color: $pagination-disabled-bg;
+  border-color: $pagination-disabled-border;
+}
+
+
+@include b('pagination') {
+  display: inline-block;
+  padding-left: 0;
+  margin-top: $spacer-y;
+  margin-bottom: $spacer-y;
+  @include border-radius();
+
+  $link-selector: '';
+  @include e('link') {
+    $link-selector: #{&};
+    position: relative;
+    float: left; // Collapse white-space
+    padding: $pagination-padding-y $pagination-padding-x;
+    margin-left: -1px;
+    color: $pagination-color;
+    text-decoration: none;
+    background-color: $pagination-bg;
+    border: $pagination-border-width solid $pagination-border-color;
+    &:hover {
+      color: $pagination-hover-color;
+      background-color: $pagination-hover-bg;
+      border-color: $pagination-hover-border;
+    }
+
+    @include m('acitve') {
+      @extend %pagination-active;
+    }
+
+    @include m('disabled') {
+      @extend %pagination-disabled;
+    }
+  }
+
+  @include e('item') {
+    display: inline;
+    @include m('first') {
+      #{$link-selector} {
+        margin-left: 0;
+        @include border-left-radius($border-radius);
+      }
+    }
+
+    @include m('last') {
+      #{$link-selector} {
+          @include border-right-radius($border-radius);
+        }
+    }
+
+    @include m('active') {
+      #{$link-selector} {
+        @extend %pagination-active;
+      }
+
+    }
+
+    @include m('disabled') {
+      #{$link-selector} {
+        @extend %pagination-disabled;
+      }
+    }
+  }
+
+  //
+  // Sizing
+  //
+
+  @include m('sm') {
+    @include pagination-size($pagination-padding-y-sm, $pagination-padding-x-sm, $font-size-sm, $line-height-sm);
+  }
+
+  @include m('lg') {
+    @include pagination-size($pagination-padding-y-lg, $pagination-padding-x-lg, $font-size-lg, $line-height-lg);
+  }
+}

@@ -4,34 +4,46 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <!--<h1 class="page-heading">Posts</h1>-->
 
-  <ul class="post-list">
+  <!--<ul class="post-list">
     {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+    <li>
+      <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
     {% endfor %}
-  </ul>
+  </ul>-->
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  <!--<p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>-->
 
   <h1 class="page-heading">Typography</h1>
-
-  <h1>Heading <small>this is samll text</small></h1>
-  <h2>Heading <small>this is samll text</small></h2>
-  <h3>Heading <small>this is samll text</small></h3>
-  <h4>Heading <small>this is samll text</small></h4>
-  <h5>Heading <small>this is samll text</small></h5>
-  <h6>Heading <small>this is samll text</small></h6>
+  <div class="page-example">
+    <h1>Heading
+      <small>this is samll text</small>
+    </h1>
+    <h2>Heading
+      <small>this is samll text</small>
+    </h2>
+    <h3>Heading
+      <small>this is samll text</small>
+    </h3>
+    <h4>Heading
+      <small>this is samll text</small>
+    </h4>
+    <h5>Heading
+      <small>this is samll text</small>
+    </h5>
+    <h6>Heading
+      <small>this is samll text</small>
+    </h6>
+  </div>
 
   <h1 class="page-heading">Buttons</h1>
-
-  <div>
+  <div class="page-example">
     <button class="btn btn--blue">button</button>
     <button class="btn btn--red">button</button>
     <button class="btn btn--yellow">button</button>
@@ -41,13 +53,13 @@ layout: default
     <button class="btn btn--light-gray">button</button>
   </div>
 
-  <div>
+  <div class="page-example">
     <button class="btn btn--blue btn--sm">button</button>
     <button class="btn btn--blue">button</button>
     <button class="btn btn--blue btn--lg">button</button>
   </div>
 
-  <div>
+  <div class="page-example">
     <button class="btn btn--outline--blue">button</button>
     <button class="btn btn--outline--red">button</button>
     <button class="btn btn--outline--yellow">button</button>
@@ -56,14 +68,14 @@ layout: default
     <button class="btn btn--outline--light-gray">button</button>
   </div>
 
-  <div>
+  <div class="page-example">
     <button class="btn btn--blue btn--disabled">disabled</button>
     <button class="btn btn--red btn--disabled">disabled</button>
     <button class="btn btn--yellow btn--disabled">disabled</button>
     <button class="btn btn--green btn--disabled">disabled</button>
   </div>
 
-  <div>
+  <div class="page-example">
     <button class="btn btn--outline--blue btn--disabled">disabled</button>
     <button class="btn btn--outline--red btn--disabled">disabled</button>
     <button class="btn btn--outline--yellow btn--disabled">disabled</button>
@@ -71,7 +83,7 @@ layout: default
   </div>
 
   <div class="page-heading">Grid</div>
-  <div>
+  <div class="page-example">
     <div class="grid-wrapper--0">
       <div class="col--1">
         <div class="card">1</div>
@@ -354,88 +366,96 @@ layout: default
   </div>
 
   <div class="page-heading">Form</div>
-  <form class="form">
-    <fieldset class="form__group">
-      <label class="form__label" for="username">账户</label>
-      <input id="username" type="text" class="form__control" placeholder="请输入用户名"/>
-    </fieldset>
+  <div class="page-example">
+    <form class="form">
+      <fieldset class="form__group">
+        <label class="form__label" for="username">账户</label>
+        <input id="username" type="text" class="form__control" placeholder="请输入用户名"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label" for="password">密码</label>
-      <input id="password" type="password" class="form__control" placeholder="请输入密码"/>
-    </fieldset>
+      <fieldset class="form__group">
+        <label class="form__label" for="password">密码</label>
+        <input id="password" type="password" class="form__control" placeholder="请输入密码"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label" for="email">邮箱</label>
-      <input id="email" type="email" class="form__control" placeholder="请输入邮箱"/>
-    </fieldset>
+      <fieldset class="form__group">
+        <label class="form__label" for="email">邮箱</label>
+        <input id="email" type="email" class="form__control" placeholder="请输入邮箱"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label" for="birthday">生日</label>
-      <input id="birthday" type="date" class="form__control" placeholder="请输入邮箱"/>
-    </fieldset>
+      <fieldset class="form__group">
+        <label class="form__label" for="birthday">生日</label>
+        <input id="birthday" type="date" class="form__control" placeholder="请输入邮箱"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label" for="select">选择</label>
-      <select name="" id="select" class="form__control">
-        <option value="">1</option>
-        <option value="">2</option>
-      </select>
-    </fieldset>
+      <fieldset class="form__group">
+        <label class="form__label" for="select">选择</label>
+        <select name="" id="select" class="form__control">
+          <option value="">1</option>
+          <option value="">2</option>
+        </select>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label>男 <input type="radio"/></label>
-      <label>女 <input type="radio"/></label>
-    </fieldset>
+      <fieldset class="form__group">
+        <label>男 <input type="radio"/></label>
+        <label>女 <input type="radio"/></label>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label>checkbox1 <input type="checkbox"/></label>
-      <label>checkbox2 <input type="checkbox"/></label>
-    </fieldset>
+      <fieldset class="form__group">
+        <label>checkbox1 <input type="checkbox"/></label>
+        <label>checkbox2 <input type="checkbox"/></label>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <button class="btn btn--blue">提交</button>
-    </fieldset>
-  </form>
+      <fieldset class="form__group">
+        <button class="btn btn--blue">提交</button>
+      </fieldset>
+    </form>
+  </div>
 
-  <form action="">
-    <fieldset class="form__group">
-      <label class="form__label form__label--sm">sm input</label>
-      <input type="text" class="form__control form__control--sm" placeholder="sm input"/>
-    </fieldset>
+  <div class="page-example">
+    <form action="">
+      <fieldset class="form__group">
+        <label class="form__label form__label--sm">sm input</label>
+        <input type="text" class="form__control form__control--sm" placeholder="sm input"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label"> input</label>
-      <input type="text" class="form__control" placeholder="sm input"/>
-    </fieldset>
+      <fieldset class="form__group">
+        <label class="form__label"> input</label>
+        <input type="text" class="form__control" placeholder="sm input"/>
+      </fieldset>
 
-    <fieldset class="form__group">
-      <label class="form__label form__label--lg">lg input</label>
-      <input type="text" class="form__control form__control--lg" placeholder="sm input"/>
-    </fieldset>
-  </form>
+      <fieldset class="form__group">
+        <label class="form__label form__label--lg">lg input</label>
+        <input type="text" class="form__control form__control--lg" placeholder="sm input"/>
+      </fieldset>
+    </form>
+  </div>
 
-  <form class="form">
-    <fieldset class="form__group">
-      <label class="form__label col-xs-3" for="username2">账户</label>
-      <div class="col-xs-9">
-        <input id="username2" class="form__control " type="text" />
-      </div>
-    </fieldset>
-    <fieldset class="form__group">
-      <button class="btn btn--blue">提交</button>
-    </fieldset>
-  </form>
+  <div class="page-example">
+    <form class="form">
+      <fieldset class="form__group">
+        <label class="form__label col-xs-3" for="username2">账户</label>
 
-  <table class="table">
-    <thead>
+        <div class="col-xs-9">
+          <input id="username2" class="form__control " type="text"/>
+        </div>
+      </fieldset>
+      <fieldset class="form__group">
+        <button class="btn btn--blue">提交</button>
+      </fieldset>
+    </form>
+  </div>
+
+  <div class="page-example">
+    <table class="table">
+      <thead>
       <tr>
         <th>1</th>
         <th>3</th>
         <th>2</th>
       </tr>
-    </thead>
-    <tbody>
+      </thead>
+      <tbody>
       <tr>
         <td>1</td>
         <td>2</td>
@@ -446,28 +466,199 @@ layout: default
         <td>2</td>
         <td>3</td>
       </tr>
-    </tbody>
-  </table>
+      </tbody>
+    </table>
+  </div>
 
-  <table class="table table--hover">
-    <thead>
-    <tr>
-      <th>1</th>
-      <th>3</th>
-      <th>2</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>3</td>
-    </tr>
-    </tbody>
-  </table>
+  <div class="page-example">
+    <table class="table table--hover">
+      <thead>
+      <tr>
+        <th>1</th>
+        <th>3</th>
+        <th>2</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="page-heading">Nav</div>
+
+  <div class="page-example">
+    <ul class="nav">
+      <li class="nav__item">
+        <a href="" class="nav__link">Design Elements</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">UI Components</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">JS Components</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">Widgets</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">CSS Utilities</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="page-example">
+    <ul class="nav nav--inline">
+      <li class="nav__item">
+        <a href="" class="nav__link">Design Elements</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">UI Components</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">JS Components</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">Widgets</a>
+      </li>
+
+      <li class="nav__item">
+        <a href="" class="nav__link">CSS Utilities</a>
+      </li>
+    </ul>
+  </div>
+
+  <div class="page-example">
+    <ul class="nav nav--tabs">
+      <li class="nav__item"><a href="#" class="nav__link nav__link--active">Design Elements</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">UI Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">JS Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Widgets</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">CSS Utilities</a></li>
+    </ul>
+  </div>
+
+  <div class="page-example">
+    <ul class="nav nav--pills">
+      <li class="nav__item"><a href="#" class="nav__link nav__link--active">Design Elements</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">UI Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">JS Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Widgets</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">CSS Utilities</a></li>
+    </ul>
+  </div>
+
+  <div class="page-example">
+    <ul class="nav nav--side">
+      <li class="nav__item"><a href="#" class="nav__link nav__link--active">Design Elements</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">UI Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">JS Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Widgets</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">CSS Utilities</a></li>
+    </ul>
+  </div>
+
+  <div class="page-example">
+    <ul class="nav nav--pills nav--stacked">
+      <li class="nav__item"><a href="#" class="nav__link nav__link--active">Design Elements</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">UI Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">JS Components</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">Widgets</a></li>
+      <li class="nav__item"><a href="#" class="nav__link">CSS Utilities</a></li>
+    </ul>
+  </div>
+
+  <div class="page-heading">Tags</div>
+  <div class="page-example">
+    <span class="tag tag--blue">primary</span>
+    <span class="tag tag--green">success</span>
+    <span class="tag tag--yellow">warning</span>
+    <span class="tag tag--red">danger</span>
+  </div>
+  <div class="page-example">
+    <span class="tag tag--blue tag--pill">primary</span>
+    <span class="tag tag--green tag--pill">success</span>
+    <span class="tag tag--yellow tag--pill">warning</span>
+    <span class="tag tag--red tag--pill">danger</span>
+  </div>
+  <div class="page-example">
+    <div class="tag tag--blue tag--blue--price">
+      <span class="tag__currency">￥</span><span>500</span>
+    </div>
+    <div class="tag tag--green tag--green--price">
+      <span class="tag__currency">￥</span><span>500</span>
+    </div>
+    <div class="tag tag--yellow tag--yellow--price">
+      <span class="tag__currency">￥</span><span>500</span>
+    </div>
+    <div class="tag tag--red tag--red--price">
+      <span class="tag__currency">￥</span><span>500</span>
+    </div>
+  </div>
+
+  <div class="page-example">
+    <span class="tag tag--input tag--blue">primary <span class="tag__close">×</span></span>
+    <span class="tag tag--input tag--yellow">success <span class="tag__close">×</span></span>
+    <span class="tag tag--input tag--green">info <span class="tag__close">×</span></span>
+    <span class="tag tag--input tag--red">warning <span class="tag__close">×</span></span>
+  </div>
+
+  <div class="page-heading">Breadcrumb</div>
+  <div class="page-example">
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item active">Home</li>
+    </ol>
+    <ol class="breadcrumb">
+      <li class="breadcrumb__item"><a href="#">Home</a></li>
+      <li class="breadcrumb__item breadcrumb__item--active">Library</li>
+    </ol>
+    <ol class="breadcrumb" style="margin-bottom: 5px;">
+      <li class="breadcrumb__item"><a href="#">Home</a></li>
+      <li class="breadcrumb__item"><a href="#">Library</a></li>
+      <li class="breadcrumb__item breadcrumb__item--active">Data</li>
+    </ol>
+  </div>
+
+  <div class="page-heading">Callouts</div>
+  <div class="page-example">
+    <div class="callout callout--warning">
+      <div class="callout__title">Multiple open modals not supported</div>
+      Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires
+      custom code.
+    </div>
+
+    <div class="callout callout--success">
+      <div class="callout__title">Multiple open modals not supported</div>
+      Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires
+      custom code.
+    </div>
+
+    <div class="callout callout--info">
+      <div class="callout__title">Multiple open modals not supported</div>
+      Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires
+      custom code.
+    </div>
+
+    <div class="callout callout--danger">
+      <div class="callout__title">Multiple open modals not supported</div>
+      Be sure not to open a modal while another is still visible. Showing more than one modal at a time requires
+      custom code.
+    </div>
+  </div>
 </div>

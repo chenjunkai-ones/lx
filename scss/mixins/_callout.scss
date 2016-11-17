@@ -1,0 +1,6 @@
+@mixin callout-variant($color) {
+  border-left-color: $color;
+  @include e('title'){
+    color: $color;
+  }
+}

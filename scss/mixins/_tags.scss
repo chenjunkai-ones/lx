@@ -1,0 +1,14 @@
+@mixin tag-variant($color) {
+  background-color: $color;
+}
+
+@mixin tag-price($color) {
+  &:after {
+    border: {
+      top: .25rem solid darken($color, 10%);
+      right: .4rem solid transparent;
+      bottom: .25rem solid transparent;
+      left: .4rem solid darken($color, 10%);
+    };
+  }
+}

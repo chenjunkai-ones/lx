@@ -1,0 +1,17 @@
+@include b('breadcrumb') {
+  padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+  margin-bottom: $spacer-y;
+  list-style: none;
+  @extend %clearfix;
+
+  @include e('item') {
+    float: left;
+    & + & {
+      &:before {
+        display: inline-block;
+        content: '/';
+        padding: 0 $breadcrumb-item-padding;
+      }
+    }
+  }
+}

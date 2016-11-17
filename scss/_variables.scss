@@ -202,3 +202,90 @@ $table-bg-active:               $table-bg-hover !default;
 
 $table-border-width:            $border-width !default;
 $table-border-color:            $gray-lightest !default;
+
+//Nav
+$nav-item-margin:               .2rem !default;
+$nav-item-inline-spacer:        1rem !default;
+$nav-link-padding:              .5em 1em !default;
+$nav-link-hover-bg:             $gray-lighter !default;
+$nav-disabled-link-color:       $gray-light !default;
+$nav-disabled-link-hover-color: $gray-light !default;
+$nav-disabled-link-hover-bg:    transparent !default;
+
+$nav-tabs-border-width:                       2px !default;
+$nav-tabs-border-radius:                      $border-radius !default;
+$nav-tabs-link-color:                         $gray-light !default;
+$nav-tabs-link-hover:                         $gray !default;
+$nav-tabs-active-link-color:                  $link-blue !default;
+$nav-tabs-active-link-border-color:           darken($nav-tabs-active-link-color, 5%) !default;
+$nav-tabs-justified-link-border-color:        #ddd !default;
+$nav-tabs-justified-active-link-border-color: $body-bg !default;
+
+$nav-pills-border-radius:     $border-radius !default;
+$nav-pills-active-link-color: $link-blue !default;
+$nav-pills-active-link-bg:    $link-blue !default;
+
+//z-index
+$zindex-dropdown-backdrop:  990 !default;
+$zindex-navbar:            1000 !default;
+$zindex-dropdown:          1000 !default;
+$zindex-popover:           1060 !default;
+$zindex-tooltip:           1070 !default;
+$zindex-navbar-fixed:      1030 !default;
+$zindex-navbar-sticky:     1030 !default;
+$zindex-modal-bg:          1040 !default;
+$zindex-modal:             1050 !default;
+
+//Navbar
+$navbar-border-radius:              $border-radius !default;
+$navbar-padding-x:                  $spacer !default;
+$navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-brand-padding-y:            .25rem !default;
+
+//Tags
+$tag-color:                 #fff !default;
+$tag-link-hover-color:      #fff !default;
+$tag-font-size:             75% !default;
+$tag-font-weight:           bold !default;
+$tag-padding-x:             .4em !default;
+$tag-padding-y:             .25em !default;
+
+$tag-pill-padding-x:        .6em !default;
+$tag-pill-border-radius:    10rem !default;
+
+// Breadcrumbs
+$breadcrumb-padding-y:          .75rem !default;
+$breadcrumb-padding-x:          1rem !default;
+$breadcrumb-item-padding:       .5rem !default;
+
+$breadcrumb-bg:                 $gray-lighter !default;
+$breadcrumb-divider-color:      $gray-light !default;
+$breadcrumb-active-color:       $gray-light !default;
+$breadcrumb-divider:            "/" !default;
+
+// Pagination
+
+$pagination-padding-x:                .75rem !default;
+$pagination-padding-y:                .5rem !default;
+$pagination-padding-x-sm:             .75rem !default;
+$pagination-padding-y-sm:             .275rem !default;
+$pagination-padding-x-lg:             1.5rem !default;
+$pagination-padding-y-lg:             .75rem !default;
+
+
+$pagination-color:                     $link-color !default;
+$pagination-bg:                        #fff !default;
+$pagination-border-width:              $border-width !default;
+$pagination-border-color:              #ddd !default;
+
+$pagination-hover-color:               $link-blue !default;
+$pagination-hover-bg:                  $gray-faded !default;
+$pagination-hover-border:              #ddd !default;
+
+$pagination-active-color:              #fff !default;
+$pagination-active-bg:                 $lp-blue !default;
+$pagination-active-border:             $lp-blue !default;
+
+$pagination-disabled-color:            $gray-light !default;
+$pagination-disabled-bg:               #fff !default;
+$pagination-disabled-border:           #ddd !default;

@@ -1,0 +1,29 @@
+@include b('callout') {
+  padding: $spacer-y $spacer-x;
+  border: 1px solid $gray-lightest;
+  border-left-width: .25rem;
+  border-radius: .25rem;
+  margin-bottom: $spacer-y;
+  background: #fff;
+
+  @include e('title') {
+    font-size: $font-size-h4;
+    margin-bottom: $spacer-y;
+  }
+
+  @include m('warning') {
+    @include callout-variant($yellow);
+  }
+
+  @include m('success') {
+    @include callout-variant($green);
+  }
+
+  @include m('danger') {
+    @include callout-variant($red);
+  }
+
+  @include m('info') {
+    @include callout-variant($link-blue);
+  }
+}

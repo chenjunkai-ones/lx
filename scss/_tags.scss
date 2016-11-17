@@ -1,0 +1,106 @@
+%price {
+  position: relative;
+  padding: $tag-padding-y * 1.5 $tag-padding-x;
+  margin-bottom: .5rem;
+  border-bottom-right-radius: 0;
+  @include box-shadow(0 1px 2px -1px rgba(0,0,0,.5));
+
+  &:after {
+    content: ' ';
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+%currency {
+  position: relative;
+  top: -.35rem;
+  font-size: .65rem;
+}
+
+@include b('tag') {
+  display: inline-block;
+  padding: $tag-padding-y $tag-padding-x;
+  text-align: center;
+  line-height: 1;
+  white-space: nowrap;
+  color: #FFFFFF;
+  vertical-align: baseline;
+  @include border-radius();
+  //@include box-shadow($btn-box-shadow);
+  &:empty {
+    display: none;
+  }
+
+  @include m('pill') {
+    padding: $tag-padding-y $tag-pill-padding-x;
+    @include border-radius($tag-pill-border-radius);
+  }
+
+  @include m('input') {
+    position: relative;
+    padding: $tag-padding-y $tag-pill-padding-x * 2;
+    @include transition(padding .15s ease-in-out);
+    @include e('close') {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-right: 10px;
+      font-size: 21px;
+      color: #FFFFFF;
+      line-height: 1;
+      text-align: right;
+      opacity: 0;
+      cursor: pointer;
+      @include transition(opacity .15s ease-in-out);
+    }
+
+    &:hover {
+      padding: $tag-padding-y $tag-pill-padding-x * 3 $tag-padding-y $tag-pill-padding-x;
+
+      @include e('close') {
+        opacity: 1;
+      }
+    }
+  }
+
+  @include m('blue') {
+    @include tag-variant($link-blue);
+    @include m('price') {
+      @extend %price;
+      @include tag-price($link-blue);
+    }
+  }
+
+  @include m('green') {
+    @include tag-variant($green);
+    @include m('price') {
+      @extend %price;
+      @include tag-price($green);
+    }
+  }
+
+  @include m('yellow') {
+    @include tag-variant($yellow);
+    @include m('price') {
+      @extend %price;
+      @include tag-price($yellow);
+    }
+  }
+
+  @include m('red') {
+    @include tag-variant($red);
+    @include m('price') {
+      @extend %price;
+      @include tag-price($red);
+    }
+  }
+
+  @include e('currency') {
+    @extend %currency;
+  }
+}

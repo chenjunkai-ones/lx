@@ -1,0 +1,54 @@
+%fixed {
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: $zindex-navbar-fixed;
+}
+
+@include b('navbar') {
+  position: relative;
+  padding: $navbar-padding-y $navbar-padding-x;
+  @extend %clearfix;
+
+  @include media-breakpoint-up(sm) {
+    @include border-radius($border-radius);
+  }
+
+  @include m('fixed-top') {
+    @extend %fixed;
+  }
+
+  @include m('fixed-bottom') {
+    @extend %fixed;
+  }
+
+  @include e('brand') {
+    float: left;
+    color: #FFFFFF;
+    padding-top: $navbar-brand-padding-y;
+    padding-bottom: $navbar-brand-padding-y;
+    margin-right: 1rem;
+  }
+
+  @include e('divider') {
+    float: left;
+    width: $border-width;
+    padding-top: .425rem;
+    padding-bottom: .425rem;
+    margin-right: $navbar-padding-x;
+    margin-left:  $navbar-padding-x;
+    overflow: hidden;
+
+    &::before {
+      content: "\00a0";
+    }
+  }
+
+  @include e('item') {
+
+  }
+
+  @include e('link') {
+
+  }
+}

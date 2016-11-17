@@ -1,0 +1,160 @@
+@include b('nav') {
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+
+  @include e('link') {
+    display: inline-block;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include m('inline') {
+    @include e('item') {
+      display: inline-block;
+      + {
+        @include e('item') {
+          margin-left: $nav-item-inline-spacer;
+        }
+      }
+    }
+  }
+
+  @include m('tabs') {
+    @extend %clearfix;
+
+    @include e('item') {
+      float: left;
+      margin-bottom: -$nav-tabs-border-width;
+      + {
+        @include e('item') {
+          margin-left: $nav-item-margin;
+        }
+      }
+    }
+
+    @include e('link'){
+      display: block;
+      color: $nav-tabs-link-color;
+      padding: $nav-link-padding;
+      border-bottom: $nav-tabs-border-width solid transparent;
+
+      &:hover {
+        color: $nav-tabs-link-hover;
+      }
+
+      @include m('active') {
+        color: $nav-tabs-active-link-color;
+        border-bottom: $nav-tabs-border-width solid $nav-tabs-active-link-border-color;
+      }
+    }
+  }
+
+  @include m('pills') {
+    @extend %clearfix;
+
+    @include e('item') {
+      float: left;
+
+      + {
+        @include e('item') {
+          margin-left: $nav-item-margin;
+        }
+      }
+
+      @include m('active') {
+        @include e('link') {
+          color: #FFFFFF;
+          background-color: $nav-tabs-active-link-color;
+        }
+      }
+    }
+
+    @include e('link') {
+      display: block;
+      padding: $nav-link-padding;
+      border-radius: $border-radius;
+      color: $nav-tabs-link-color;
+      &:hover {
+        color: $nav-tabs-link-hover;
+      }
+
+      @include m('active') {
+        color: #FFFFFF;
+        background-color: $nav-tabs-active-link-color;
+      }
+    }
+  }
+
+  @include m('stacked') {
+    @include e('item') {
+      display: block;
+      float: none;
+
+      + {
+        @include e('item') {
+          margin-top: $nav-item-margin;
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  @include m('side') {
+    display: block;
+    float: none;
+    box-shadow: 0 0 1px 0 rgba(44,54,67,0.1);
+    border-radius: $border-radius;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+
+    @include e('header') {
+      padding: $nav-link-padding;
+      border-bottom: 1px solid darken($gray-faded, 10%);
+    }
+
+    @include e('link') {
+      color: $nav-tabs-link-color;
+    }
+
+    @include e('item') {
+      position: relative;
+      padding: $nav-link-padding;
+      color: $nav-tabs-link-color;
+
+      &:after {
+        content: ' ';
+        float: right;
+        display: block;
+        width: 5px;
+        height: 5px;
+        margin-top: 8px;
+        border: {
+          right: 2px solid $gray-light;
+          top: 2px solid $gray-light;
+        };
+        transform: rotate(45deg);
+      }
+
+      &:hover {
+        background-color: $gray-faded;
+      }
+      + {
+        @include e('item') {
+          border-top: 1px solid darken($gray-faded, 5%);
+        }
+      }
+
+      @include m('active') {
+        border-left: 2px solid $lp-blue;
+        background-color: $gray-faded;
+      }
+    }
+  }
+}
+
+.tab-content {
+
+}
